@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verificar se um número é par ou ímpar</title>
+  </head>
+  <body>
+    <h1>Verificar se um número é par ou ímpar</h1>
+    <label for="number-input">Digite um número:</label>
+    <input type="number" id="number-input">
+    <button id="check-btn">Verificar</button>
+    <p id="result"></p>
+
+    <script>
+      let checkBtn = document.getElementById("check-btn");
+      let numberInput = document.getElementById("number-input");
+      let result = document.getElementById("result");
+
+      checkBtn.addEventListener("click", function() {
+        let num = parseInt(numberInput.value);
+        if (num % 2 === 0) {
+          result.textContent = "O número " + num + " é par.";
+        } else {
+          result.textContent = "O número " + num + " é ímpar.";
+        }
+      });
+    </script>
+  </body>
+</html>
